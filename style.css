@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #333;
+    min-height: 100vh;
+    padding: 40px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 30px;
+    color: #29364b;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Input Section */
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    background-color: white;
+}
+
+input:focus, select:focus {
+    border-color: #648edb;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 0;
+}
+
+#priorityInput {
+    width: 135px;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 11px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Add Button */
+
+#addButton {
+    background-color: #648edb;
+    color: white;
+}
+
+#addButton:hover {
+    background-color: #4d76c2;
+}
+
+/* Search */
+
+.search-section {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    background-color: #fafafa;
+}
+
+/* Filters */
+
+.filter-section {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.filter-btn {
+    background-color: #f1f3f6;
+    color: #666;
+    padding: 9px 18px;
+}
+
+.filter-btn:hover {
+    background-color: #e5eaf2;
+}
+
+.filter-btn.active {
+    background-color: #648edb;
+    color: white;
+}
+
+/* Task Heading */
+
+.task-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.task-heading h2 {
+    font-size: 19px;
+    color: #333;
+}
+
+#taskCount {
+    font-size: 13px;
+    color: #888;
+}
+
+/* Task Items */
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    margin-bottom: 10px;
+    background-color: #f8f9fb;
+    border: 1px solid #eee;
+    border-radius: 7px;
+}
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    background: none;
+    padding: 5px;
+    color: #444;
+    overflow-wrap: anywhere;
+}
+
+.task-text:hover {
+    color: #648edb;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Priority Labels */
+
+.priority {
+    font-size: 11px;
+    padding: 5px 9px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.high {
+    background-color: #fce8e8;
+    color: #d9534f;
+}
+
+.medium {
+    background-color: #fff2d9;
+    color: #b7791f;
+}
+
+.low {
+    background-color: #e4f3e8;
+    color: #39834d;
+}
+
+/* Edit and Delete Buttons */
+
+.edit-button {
+    background-color: #e8eefb;
+    color: #456bb3;
+    padding: 8px 10px;
+}
+
+.edit-button:hover {
+    background-color: #d9e4fa;
+}
+
+.delete-button {
+    background-color: #fceaea;
+    color: #d9534f;
+    padding: 8px 10px;
+}
+
+.delete-button:hover {
+    background-color: #f7d5d5;
+}
+
+/* Edit Input */
+
+.edit-input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+}
+
+.save-button {
+    background-color: #e4f3e8;
+    color: #39834d;
+}
+
+.cancel-button {
+    background-color: #eee;
+    color: #555;
+}
+
+/* Empty Message */
+
+#emptyMessage {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    padding: 25px 5px;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 20px;
+    text-align: right;
+    border-top: 1px solid #eee;
+    padding-top: 18px;
+}
+
+#clearButton {
+    background-color: #eeeeee;
+    color: #555;
+}
+
+#clearButton:hover {
+    background-color: #ddd;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 550px) {
+    .container {
+        padding: 20px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    #priorityInput {
+        width: 100%;
+    }
+
+    #addButton {
+        width: 100%;
+    }
+
+    #taskList li {
+        flex-wrap: wrap;
+    }
+
+    .task-text {
+        flex-basis: 60%;
+    }
+}
